@@ -2,7 +2,7 @@
 from Articles import Article
 
 class Author:
-    
+    # List to store all author instances
     all_authors = []
     
     def __init__(self, name):

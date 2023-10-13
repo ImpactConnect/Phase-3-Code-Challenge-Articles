@@ -2,6 +2,7 @@
 from Articles import Article
 
 class Magazine:
+    # List to store all magazine instances
     all_maz_instances = []
     
     def __init__ (self, name, category):
@@ -16,15 +17,18 @@ class Magazine:
     def category(self):
         return self.category
     
+    # Class method to get a list of all magazine instances
     @classmethod
     def all(cls):
         return cls.all_maz_instances
     
-    #2
+    #2 
+    
     def contributors(self):
         return self.contributors #author instance list
     
     #3
+    # Class method to find a magazine by its name and return the first matching magazine instance
     @classmethod
     def find_by_name(cls, name):
         return next((magazine for magazine in cls.all_maz_instances if magazine.name() == name), None)
